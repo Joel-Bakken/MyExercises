@@ -2,10 +2,10 @@ package com.example.joelbakken.myexercises;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.GridView;
+import android.widget.ListView;
 
 public class ViewActivity extends AppCompatActivity {
-    GridView gridView;
+    ListView listView;
     String[] exercise = new String[] {
             "Jogging", "Running", "Swimming"};
     String[] date = new String[] {
@@ -21,5 +21,9 @@ public class ViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
+
+        listView = (ListView) findViewById(R.id.baseListView);
+
+        listView.setAdapter(new ExercisesAdapter(this, exercise, date, startTime, endTime, notes));
     }
 }
