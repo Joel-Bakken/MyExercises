@@ -12,7 +12,6 @@ public class LogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
 
-        mSubmitButton = (Button) findViewById(R.id.submitButton);
-            mSubmitButton.setOnClickListener();
+
     }
 }

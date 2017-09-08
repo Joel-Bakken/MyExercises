@@ -75,7 +75,6 @@
 
     <Button
         android:id="@+id/submitButton"
-        style="@android:style/Widget.Button.Transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

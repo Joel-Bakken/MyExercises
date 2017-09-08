@@ -30,7 +30,6 @@
 
     <Button
         android:id="@+id/logButton"
-        style="@android:style/Widget.Button.Transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="57dp"
@@ -45,7 +44,6 @@
 
     <Button
         android:id="@+id/viewButton"
-        style="@android:style/Widget.Button.Transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimaryLight"
