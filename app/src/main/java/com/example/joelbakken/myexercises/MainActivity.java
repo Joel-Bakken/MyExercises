@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button mLogButton;
+    private Button mViewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        mV
+        mViewButton = (Button) findViewById(R.id.viewButton);
+            mViewButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                    startActivity(intent);
+                }
+            });
+
     }
 }
