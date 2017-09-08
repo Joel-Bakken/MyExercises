@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.joelbakken.myexercises.LogActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/log2" />
+
+    <EditText
+        android:id="@+id/exerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="What did you do?"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Exercise:" />
+
+    <EditText
+        android:id="@+id/logDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/exerciseName"
+        android:contentDescription="When did you do it?"
+        android:ems="10"
+        android:hint="What date did you exercise?"
+        android:inputType="date"
+        android:text="Date:" />
+
+    <EditText
+        android:id="@+id/logStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logDate"
+        android:contentDescription="What time did you start?"
+        android:ems="10"
+        android:hint="When did you start?"
+        android:inputType="time"
+        android:text="Start Time:" />
+
+    <EditText
+        android:id="@+id/logEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logStartTime"
+        android:contentDescription="When did you stop?"
+        android:ems="10"
+        android:hint="What time did you stop?"
+        android:inputType="time"
+        android:text="End Time" />
+
+    <EditText
+        android:id="@+id/logExerciseNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/logEndTime"
+        android:ems="10"
+        android:hint="Put any notes about your exercise"
+        android:inputType="textMultiLine"
+        android:text="Notes:" />
+
+</RelativeLayout>

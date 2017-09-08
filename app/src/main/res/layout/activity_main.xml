@@ -6,13 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.example.joelbakken.myexercises.MainActivity">
 
+    <ImageView
+        android:id="@+id/mainPic"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="woman doing yoga on a wodden beam"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/mainpic" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:contentDescription="Welcome to MyExercises"
         android:fontFamily="casual"
         android:text="Welcome to MyExercises"
-        android:textSize="24sp" />
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logButton"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="click to log your latest exercises"
+        android:text="Log Exercise"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp" />
+
+    <Button
+        android:id="@+id/viewButton"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:text="View My Exercises"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp" />
+
 
 </RelativeLayout>
