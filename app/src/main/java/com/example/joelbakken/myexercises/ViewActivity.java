@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 public class ViewActivity extends AppCompatActivity {
-    ListView listView;
+    private ListView mlistView;
     String[] exercise = new String[] {
             "Jogging", "Running", "Swimming"};
     String[] date = new String[] {
@@ -22,8 +22,7 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
 
-        listView = (ListView) findViewById(R.id.baseListView);
+        mlistView = (ListView) findViewById(R.id.exercises);
 
-        listView.setAdapter(new ExercisesAdapter(this, exercise, date, startTime, endTime, notes));
     }
 }
