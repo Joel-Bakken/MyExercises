@@ -14,7 +14,7 @@ public class MyExercisesArrayAdapter extends ArrayAdapter {
     private String[] mEndTime;
     private String[] mNotes;
 
-    public MyExercisesArrayAdapter(Context context, String[] exercises, String[] date, String[] startTime, String[] endTime, String[] notes) {
+    public MyExercisesArrayAdapter(Context mContext, int resource, String[] exercises, String[] date, String[] startTime, String[] endTime, String[] notes) {
         super(mContext, resource);
         this.mContext = mContext;
         this.mExercises = mExercises;
