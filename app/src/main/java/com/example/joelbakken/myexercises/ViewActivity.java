@@ -32,17 +32,17 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, exercise);
+        MyExercisesArrayAdapter adapter = new MyExercisesArrayAdapter(this, android.R.layout.simple_list_item_1, exercise, date, startTime, endTime, notes);
         mListView.setAdapter(adapter);
 
-        mListView.setOnClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String exercise = ((TextView)view).getText().toString();
-                Toast.makeText(ViewActivity.this, exercise,
-                        Toast.LENGTH_LONG).show();
-            }
-        });
+//        mListView.setOnClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                String exercise = ((TextView)view).getText().toString();
+//                Toast.makeText(ViewActivity.this, exercise,
+//                        Toast.LENGTH_LONG).show();
+//            }
+//        });
 
         Intent intent = getIntent();
         String exercise = intent.getStringExtra("exercise");
