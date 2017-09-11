@@ -20,7 +20,7 @@ public class LogActivity extends AppCompatActivity {
         mSubmitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                
+
             }
         });
     }
