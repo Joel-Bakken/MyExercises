@@ -14,7 +14,7 @@ public class MyExercisesArrayAdapter extends ArrayAdapter {
     private String[] mEndTime;
     private String[] mNotes;
 
-    public MyExercisesArrayAdapter(Context mContext, int resource, String[] exercises, String[] date, String[] startTime, String[] endTime, String[] notes) {
+    public MyExercisesArrayAdapter(Context mContext, int resource, String[] mExercises, String[] mDate, String[] mStartTime, String[] mEndTime, String[] mNotes) {
         super(mContext, resource);
         this.mContext = mContext;
         this.mExercises = mExercises;
@@ -26,12 +26,12 @@ public class MyExercisesArrayAdapter extends ArrayAdapter {
 
     @Override
     public Object getItem(int position) {
-        String exercise = mExercises[position];
+        String exercises = mExercises[position];
         String date = mDate[position];
         String startTime = mStartTime[position];
         String endTime = mEndTime[position];
         String notes = mNotes[position];
-        return String.format("You %s on %s from %s to %s. Notes: %s ", exercise, date, startTime, endTime, notes);
+        return String.format("You %s on %s from %s to %s. Notes: %s ", exercises, date, startTime, endTime, notes);
     }
 
     @Override

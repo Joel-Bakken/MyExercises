@@ -9,13 +9,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import java.util.Date;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class ViewActivity extends AppCompatActivity {
-//    @Bind(R.id.exerciseLog) TextView mExerciseLog;
+    @Bind(R.id.exerciseLog) TextView mExerciseLog;
     @Bind(R.id.listView) ListView mListView;
-    String[] exercise = new String[] {
+    String[] exercises = new String[] {
             "Jogging", "Running", "Swimming"};
     String[] date = new String[] {
             "6/8/2017", "7/1/2017", "9/1/2017"};
@@ -32,7 +35,7 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
         ButterKnife.bind(this);
 
-        MyExercisesArrayAdapter adapter = new MyExercisesArrayAdapter(this, android.R.layout.simple_list_item_1, exercise, date, startTime, endTime, notes);
+        MyExercisesArrayAdapter adapter = new MyExercisesArrayAdapter(this, android.R.layout.simple_list_item_1, exercises, date, startTime, endTime, notes);
         mListView.setAdapter(adapter);
 
 //        Intent intent = getIntent();
