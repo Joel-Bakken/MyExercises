@@ -31,12 +31,12 @@ public class MyExercisesArrayAdapter extends ArrayAdapter {
         String startTime = mStartTime[position];
         String endTime = mEndTime[position];
         String notes = mNotes[position];
-        return String.format("%s\n", exercise, date, startTime, endTime, notes);
+        return String.format("You %s on %s from %s to %s. Notes: %s ", exercise, date, startTime, endTime, notes);
     }
 
     @Override
     public int getCount() {
-        return mExercises.length + mDate.length + mStartTime.length + mEndTime.length + mNotes.length;
+        return mExercises.length;
     }
 
 }

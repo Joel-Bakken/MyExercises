@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class ViewActivity extends AppCompatActivity {
-    @Bind(R.id.exerciseLog) TextView mExerciseLog;
+//    @Bind(R.id.exerciseLog) TextView mExerciseLog;
     @Bind(R.id.listView) ListView mListView;
     String[] exercise = new String[] {
             "Jogging", "Running", "Swimming"};
@@ -35,17 +35,8 @@ public class ViewActivity extends AppCompatActivity {
         MyExercisesArrayAdapter adapter = new MyExercisesArrayAdapter(this, android.R.layout.simple_list_item_1, exercise, date, startTime, endTime, notes);
         mListView.setAdapter(adapter);
 
-//        mListView.setOnClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                String exercise = ((TextView)view).getText().toString();
-//                Toast.makeText(ViewActivity.this, exercise,
-//                        Toast.LENGTH_LONG).show();
-//            }
-//        });
-
-        Intent intent = getIntent();
-        String exercise = intent.getStringExtra("exercise");
-        mExerciseLog.setText("On this date you did" + exercise + "for exercise.");
+//        Intent intent = getIntent();
+//        String exercise = intent.getStringExtra("exercise");
+//        mExerciseLog.setText("On " + date  + " you did " + exercise + " for exercise from " + startTime + " to " + endTime + "." + "Notes: " + notes);
     }
 }
