@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.logButton) Button mLogButton;
     @Bind(R.id.viewButton) Button mViewButton;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
+    @Bind(R.id.aboutButton) Button mAboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mAboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
             }
         });

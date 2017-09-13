@@ -1,5 +1,6 @@
 package com.example.joelbakken.myexercises;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import butterknife.ButterKnife;
 public class LogActivity extends AppCompatActivity {
 
     @Bind(R.id.submitButton) Button mSubmitButton;
+    @Bind(R.id.aboutButton) Button mAboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +25,12 @@ public class LogActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        mAboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LogActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -55,5 +55,15 @@
         android:layout_alignBottom="@+id/logButton"
         android:layout_alignParentEnd="true" />
 
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/logButton"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="About"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
