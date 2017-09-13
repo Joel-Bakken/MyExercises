@@ -10,22 +10,22 @@
         android:id="@+id/exerciseLog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@android:color/transparent"
         android:contentDescription="Exercise Log"
         android:fontFamily="casual"
         android:textColor="@color/colorPrimaryText"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_above="@+id/logButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="336dp" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/logButton"
-        android:layout_below="@+id/exerciseLog" />
+        android:layout_alignParentStart="true"
+        android:paddingTop="200dp" />
 
     <Button
         android:id="@+id/logButton"
