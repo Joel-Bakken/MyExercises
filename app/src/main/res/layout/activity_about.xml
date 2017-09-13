@@ -8,6 +8,15 @@
     tools:layout_editor_absoluteY="0dp"
     tools:layout_editor_absoluteX="0dp">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/mainpic" />
+
     <TextView
         android:id="@+id/about1TextView"
         android:layout_width="match_parent"
@@ -25,63 +34,97 @@
         android:id="@+id/about2TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/about1TextView"
-        android:layout_marginTop="34dp"
         android:fontFamily="casual"
         android:text="This app was created using Android Studio on a 6 year old MacBook Pro."
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/about1TextView"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/about3TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/about2TextView"
         android:fontFamily="casual"
         android:text="For help using this app please contact me at: jkbetc@gmail.com"
         android:textAlignment="center"
         android:textColor="?android:attr/colorAccent"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/about2TextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
 
     <TextView
         android:id="@+id/about4TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/about3TextView"
         android:fontFamily="casual"
         android:text="I learned how to make this app at Epicodus in Seattle Washington"
         android:textAlignment="center"
         android:textColor="@android:color/holo_purple"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/about3TextView"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/about5TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/about4TextView"
         android:fontFamily="casual"
         android:text="There is currently no support for wearables, you need to keep track of your own exercise"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_light"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/about6TextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp" />
 
     <TextView
         android:id="@+id/about6TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/about5TextView"
-        android:layout_below="@+id/about5TextView"
-        android:layout_marginTop="40dp"
         android:fontFamily="casual"
         android:text="Have a nice day!"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_above="@+id/logButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="click to log your latest exercises"
+        android:text="Log Exercise"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:text="View My Exercises"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginEnd="19dp"
+        android:layout_alignBaseline="@+id/logButton"
+        android:layout_alignBottom="@+id/logButton"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
