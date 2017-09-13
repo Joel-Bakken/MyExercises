@@ -18,13 +18,16 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
+        ButterKnife.bind(this);
 
-//        mSubmitButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+        mSubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogActivity.this, ViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
         mAboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
