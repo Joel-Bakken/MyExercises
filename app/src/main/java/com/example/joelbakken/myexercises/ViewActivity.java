@@ -40,6 +40,9 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
         ButterKnife.bind(this);
+        Intent intent = getIntent();
+        String exerciseName = intent.getStringExtra("exerciseName");
+        mExerciseLog.setText("You did the following exercise: " + exerciseName);
 
         mLogButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +63,6 @@ public class ViewActivity extends AppCompatActivity {
         MyExercisesArrayAdapter adapter = new MyExercisesArrayAdapter(this, android.R.layout.simple_list_item_1, exercises, date, startTime, endTime, notes);
         mListView.setAdapter(adapter);
 
-//        Intent intent = getIntent();
-//        String exercise = intent.getStringExtra("exercise");
-//        mExerciseLog.setText("On " + date  + " you did " + exercise + " for exercise from " + startTime + " to " + endTime + "." + "Notes: " + notes);
+
     }
 }

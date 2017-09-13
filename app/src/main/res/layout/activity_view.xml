@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/exerciseLog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
         android:contentDescription="Exercise Log"
         android:fontFamily="casual"
         android:textColor="@color/colorPrimaryText"
@@ -20,11 +21,11 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/logButton" />
+        android:layout_above="@+id/logButton"
+        android:layout_below="@+id/exerciseLog" />
 
     <Button
         android:id="@+id/logButton"

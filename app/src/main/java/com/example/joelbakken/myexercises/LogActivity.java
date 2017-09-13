@@ -15,11 +15,11 @@ public class LogActivity extends AppCompatActivity {
 
     @Bind(R.id.submitButton) Button mSubmitButton;
     @Bind(R.id.aboutButton) Button mAboutButton;
-//    @Bind(R.id.exerciseName) EditText mExerciseName;  // for use with form validation
-//    @Bind(R.id.logDate) EditText mLogDate;  // for use with form validation
-//    @Bind(R.id.logStartTime) EditText mLogStartTime;  // for use with form validation
-//    @Bind(R.id.logEndTime) EditText mLogEndTime;  // for use with form validation
-//    @Bind(R.id.logExerciseNotes) EditText mLogExerciseNotes;  // for use with form validation
+    @Bind(R.id.exerciseName) EditText mExerciseName;  // for use with form validation
+    @Bind(R.id.logDate) EditText mLogDate;  // for use with form validation
+    @Bind(R.id.logStartTime) EditText mLogStartTime;  // for use with form validation
+    @Bind(R.id.logEndTime) EditText mLogEndTime;  // for use with form validation
+    @Bind(R.id.logExerciseNotes) EditText mLogExerciseNotes;  // for use with form validation
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,9 @@ public class LogActivity extends AppCompatActivity {
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String exerciseName = mExerciseName.getText().toString();
                 Intent intent = new Intent(LogActivity.this, ViewActivity.class);
+                intent.putExtra("exerciseName", exerciseName);
                 startActivity(intent);
             }
         });
