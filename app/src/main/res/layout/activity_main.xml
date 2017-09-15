@@ -59,10 +59,20 @@
         android:id="@+id/aboutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/logButton"
         android:backgroundTint="@android:color/holo_blue_light"
         android:text="About"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/logButton" />
+
+    <Button
+        android:id="@+id/findFitnessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/viewButton"
+        android:layout_alignTop="@+id/aboutButton"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:text="Find Fitness Center"
         android:textStyle="bold" />
 
 

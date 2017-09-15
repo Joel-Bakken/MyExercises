@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.viewButton) Button mViewButton;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
     @Bind(R.id.aboutButton) Button mAboutButton;
+    @Bind(R.id.findFitnessButton) Button mFindFitnessButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mFindFitnessButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FindFitnessActivity.class);
                 startActivity(intent);
             }
         });
