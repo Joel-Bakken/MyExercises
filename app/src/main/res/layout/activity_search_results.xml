@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.joelbakken.myexercises.SearchResultsActivity">
+    tools:context="com.example.joelbakken.myexercises.ui.SearchResultsActivity">
 
     <TextView
         android:id="@+id/fitnessLocationTextView"
@@ -20,7 +20,12 @@
         android:layout_height="495dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/fitnessLocationTextView"
         android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"/>
 
 </RelativeLayout>

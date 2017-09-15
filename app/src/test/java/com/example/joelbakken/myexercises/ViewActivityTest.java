@@ -3,6 +3,8 @@ package com.example.joelbakken.myexercises;
 import android.os.Build;
 import android.widget.TextView;
 
+import com.example.joelbakken.myexercises.ui.ViewActivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

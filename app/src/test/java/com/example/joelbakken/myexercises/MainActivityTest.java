@@ -1,7 +1,8 @@
 package com.example.joelbakken.myexercises;
 
 import android.os.Build;
-import android.widget.TextView;
+
+import com.example.joelbakken.myexercises.ui.MainActivity;
 
 import org.junit.Before;
 import org.junit.Test;

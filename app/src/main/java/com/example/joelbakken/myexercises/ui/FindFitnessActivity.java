@@ -1,4 +1,4 @@
-package com.example.joelbakken.myexercises;
+package com.example.joelbakken.myexercises.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.joelbakken.myexercises.R;
+
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class FindFitnessActivity extends AppCompatActivity {
     @Bind(R.id.findFitnessButton) Button mFindFitnessButton;

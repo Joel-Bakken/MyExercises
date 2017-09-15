@@ -1,4 +1,4 @@
-package com.example.joelbakken.myexercises;
+package com.example.joelbakken.myexercises.models;
 
 
 import java.util.ArrayList;
@@ -62,5 +62,8 @@ public class FitnessLocation {
 
     public ArrayList<String> getCategories() {
         return mCategories;
+    }
+
+    public void add(FitnessLocation fitnesslocation) {
     }
 }

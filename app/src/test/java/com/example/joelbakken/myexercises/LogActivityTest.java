@@ -2,7 +2,8 @@ package com.example.joelbakken.myexercises;
 
 import android.os.Build;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.joelbakken.myexercises.ui.LogActivity;
 
 import org.junit.Before;
 import org.junit.Test;
