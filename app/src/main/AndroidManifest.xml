@@ -21,7 +21,8 @@
         <activity android:name=".LogActivity" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".FindFitnessActivity"></activity>
+        <activity android:name=".FindFitnessActivity" />
+        <activity android:name=".SearchResultsActivity"></activity>
     </application>
 
 </manifest>
