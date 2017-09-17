@@ -81,9 +81,7 @@ public class YelpService {
                     fitnesslocation.add(fitnesslocation);
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
         return fitnessLocations;

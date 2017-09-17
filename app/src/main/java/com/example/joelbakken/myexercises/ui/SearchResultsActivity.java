@@ -60,7 +60,7 @@ public class SearchResultsActivity extends AppCompatActivity {
     private void getFitnessLocations(String fitnessLocation) {
         final YelpService yelpService = new YelpService();
 
-        yelpService.findFitness(fitnessLocation, new Callback(){
+        YelpService.findFitness(fitnessLocation, new Callback(){
 
 
             public void onFailure(Call call, IOException e) {
