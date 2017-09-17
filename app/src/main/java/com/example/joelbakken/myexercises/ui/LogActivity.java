@@ -36,7 +36,7 @@ public class LogActivity extends AppCompatActivity {
                 Intent intent = new Intent(LogActivity.this, ViewActivity.class);
                 intent.putExtra("exerciseName", exerciseName);
                 if (exerciseName.equals("")) {
-                    Toast.makeText(LogActivity.this, "Please fill out all fields", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LogActivity.this, "Please fill out all fields Elysia", Toast.LENGTH_LONG).show();
                 } else {
                 startActivity(intent);
                 }
