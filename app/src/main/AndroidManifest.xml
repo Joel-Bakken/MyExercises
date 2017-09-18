@@ -23,7 +23,7 @@
         <activity android:name=".ui.AboutActivity" />
         <activity android:name=".ui.FindFitnessActivity" />
         <activity android:name=".ui.SearchResultsActivity" />
-        <activity android:name=".ui.FitnessDetailActivity"></activity>
+        <activity android:name=".ui.FitnessLocationDetailActivity"></activity>
     </application>
 
 </manifest>

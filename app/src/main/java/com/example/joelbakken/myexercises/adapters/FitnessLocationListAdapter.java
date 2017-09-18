@@ -2,7 +2,6 @@ package com.example.joelbakken.myexercises.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.icu.util.ULocale;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +11,7 @@ import android.widget.TextView;
 
 import com.example.joelbakken.myexercises.R;
 import com.example.joelbakken.myexercises.models.FitnessLocation;
-import com.example.joelbakken.myexercises.ui.FitnessDetailActivity;
-import com.example.joelbakken.myexercises.ui.SearchResultsActivity;
+import com.example.joelbakken.myexercises.ui.FitnessLocationDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -74,7 +72,7 @@ public class FitnessLocationListAdapter extends RecyclerView.Adapter<FitnessLoca
 
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, FitnessDetailActivity.class);
+            Intent intent = new Intent(mContext, FitnessLocationDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("fitnessLocations", Parcels.wrap(mFitnessLocations));
             mContext.startActivity(intent);

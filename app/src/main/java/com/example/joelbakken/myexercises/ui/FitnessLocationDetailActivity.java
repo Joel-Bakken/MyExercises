@@ -16,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class FitnessDetailActivity extends AppCompatActivity {
+public class FitnessLocationDetailActivity extends AppCompatActivity {
     @Bind(R.id.viewPager) ViewPager mViewPager;
     private FitnessLocationPagerAdapter adapterViewPager;
     ArrayList<FitnessLocation> mfitnessLocations = new ArrayList<>();
@@ -24,7 +24,7 @@ public class FitnessDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fitness_detail);
+        setContentView(R.layout.activity_fitness_location_detail);
         ButterKnife.bind(this);
 
         mfitnessLocations = Parcels.unwrap(getIntent().getParcelableExtra("fitnessLocations"));
