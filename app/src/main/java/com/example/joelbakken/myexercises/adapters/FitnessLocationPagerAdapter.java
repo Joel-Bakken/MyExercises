@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.joelbakken.myexercises.models.FitnessLocation;
-import com.example.joelbakken.myexercises.ui.FitnessLocationFragment;
+import com.example.joelbakken.myexercises.ui.FitnessLocationDetailFragment;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class FitnessLocationPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return FitnessLocationFragment.newInstance(mFitnessLocations.get(position));
+        return FitnessLocationDetailFragment.newInstance(mFitnessLocations.get(position));
     }
 
     @Override

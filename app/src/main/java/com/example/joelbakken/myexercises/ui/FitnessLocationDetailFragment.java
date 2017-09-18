@@ -1,6 +1,5 @@
 package com.example.joelbakken.myexercises.ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import org.parceler.Parcels;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FitnessLocationFragment extends Fragment implements View.OnClickListener {
+public class FitnessLocationDetailFragment extends Fragment implements View.OnClickListener {
     @Bind(R.id.fitnessLocationImageView) ImageView mImageLabel;
     @Bind(R.id.fitnessLocationTextView) TextView mNameLabel;
     @Bind(R.id.ratingTextView) TextView mRatingLabel;
@@ -32,12 +31,12 @@ public class FitnessLocationFragment extends Fragment implements View.OnClickLis
 
     private FitnessLocation mFitnessLocation;
 
-    public static FitnessLocationFragment newInstance(FitnessLocation fitnessLocation) {
-        FitnessLocationFragment fitnessLocationFragment = new FitnessLocationFragment();
+    public static FitnessLocationDetailFragment newInstance(FitnessLocation fitnessLocation) {
+        FitnessLocationDetailFragment fitnessLocationDetailFragment = new FitnessLocationDetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("fitnessLocation", Parcels.wrap(fitnessLocation));
-        fitnessLocationFragment.setArguments(args);
-        return fitnessLocationFragment;
+        fitnessLocationDetailFragment.setArguments(args);
+        return fitnessLocationDetailFragment;
     }
 
     @Override
@@ -48,7 +47,7 @@ public class FitnessLocationFragment extends Fragment implements View.OnClickLis
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fitness_location, container, false);
+        View view = inflater.inflate(R.layout.fragment_fitness_location_detail, container, false);
         ButterKnife.bind(this, view);
 
         Picasso.with(view.getContext()).load(mFitnessLocation.getImageUrl()).into(mImageLabel);
