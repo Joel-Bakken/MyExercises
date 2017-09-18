@@ -1,8 +1,9 @@
 package com.example.joelbakken.myexercises.models;
 
-
+import org.parceler.Parcel;
 import java.util.ArrayList;
 
+@Parcel
 public class FitnessLocation {
     private String mName;
     private String mPhone;
