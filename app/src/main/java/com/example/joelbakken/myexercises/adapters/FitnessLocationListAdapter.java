@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.joelbakken.myexercises.R;
 import com.example.joelbakken.myexercises.models.FitnessLocation;
+import com.example.joelbakken.myexercises.ui.FitnessDetailActivity;
 import com.example.joelbakken.myexercises.ui.SearchResultsActivity;
 import com.squareup.picasso.Picasso;
 
@@ -73,7 +74,7 @@ public class FitnessLocationListAdapter extends RecyclerView.Adapter<FitnessLoca
 
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, FitnessLocationDetailActivity.class);
+            Intent intent = new Intent(mContext, FitnessDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("fitnessLocations", Parcels.wrap(mFitnessLocations));
             mContext.startActivity(intent);

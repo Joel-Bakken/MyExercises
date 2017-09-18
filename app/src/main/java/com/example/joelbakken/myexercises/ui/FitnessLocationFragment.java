@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
 
 public class FitnessLocationFragment extends Fragment {
     @Bind(R.id.fitnessLocationImageView) ImageView mImageLabel;
-    @Bind(R.id.fitnessLNameTextView) TextView mNameLabel;
+    @Bind(R.id.fitnessLocationTextView) TextView mNameLabel;
     @Bind(R.id.ratingTextView) TextView mRatingLabel;
     @Bind(R.id.websiteTextView) TextView mWebsiteLabel;
     @Bind(R.id.phoneTextView) TextView mPhoneLabel;
