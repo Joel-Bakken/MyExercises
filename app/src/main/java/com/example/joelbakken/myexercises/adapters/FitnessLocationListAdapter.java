@@ -1,6 +1,7 @@
 package com.example.joelbakken.myexercises.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.icu.util.ULocale;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +12,10 @@ import android.widget.TextView;
 
 import com.example.joelbakken.myexercises.R;
 import com.example.joelbakken.myexercises.models.FitnessLocation;
+import com.example.joelbakken.myexercises.ui.SearchResultsActivity;
 import com.squareup.picasso.Picasso;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -45,7 +49,7 @@ public class FitnessLocationListAdapter extends RecyclerView.Adapter<FitnessLoca
         return mFitnessLocations.size();
     }
 
-    public class FitnessLocationViewHolder extends RecyclerView.ViewHolder {
+    public class FitnessLocationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @Bind(R.id.fitnessLocationImageView) ImageView mFitnessLocationImageView;
         @Bind(R.id.fitnessLocationTextView) TextView mFitnessLocationTextView;
         @Bind(R.id.categoryTextView) TextView mCategoryTextView;
@@ -57,6 +61,7 @@ public class FitnessLocationListAdapter extends RecyclerView.Adapter<FitnessLoca
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+            itemView.setOnClickListener(this);
         }
 
         public void bindFitnessLocation(FitnessLocation fitnessLocation) {
@@ -64,6 +69,14 @@ public class FitnessLocationListAdapter extends RecyclerView.Adapter<FitnessLoca
             mFitnessLocationTextView.setText(fitnessLocation.getName());
             mCategoryTextView.setText(fitnessLocation.getCategories().get(0));
             mRatingTextView.setText("Rating: " + fitnessLocation.getRating() + "/5");
+        }
+
+        public void onClick(View v) {
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, FitnessLocationDetailActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("fitnessLocations", Parcels.wrap(mFitnessLocations));
+            mContext.startActivity(intent);
         }
     }
 }
