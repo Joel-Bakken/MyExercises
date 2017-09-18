@@ -1,6 +1,7 @@
 package com.example.joelbakken.myexercises.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -20,7 +21,7 @@ import org.parceler.Parcels;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FitnessLocationFragment extends Fragment {
+public class FitnessLocationFragment extends Fragment implements View.OnClickListener {
     @Bind(R.id.fitnessLocationImageView) ImageView mImageLabel;
     @Bind(R.id.fitnessLocationTextView) TextView mNameLabel;
     @Bind(R.id.ratingTextView) TextView mRatingLabel;
@@ -53,11 +54,30 @@ public class FitnessLocationFragment extends Fragment {
         Picasso.with(view.getContext()).load(mFitnessLocation.getImageUrl()).into(mImageLabel);
 
         mNameLabel.setText(mFitnessLocation.getName());
+        mWebsiteLabel.setOnClickListener(this);
         mRatingLabel.setText(Double.toString(mFitnessLocation.getRating()) + "/5");
+        mPhoneLabel.setOnClickListener(this);
         mPhoneLabel.setText(mFitnessLocation.getPhone());
         mAddressLabel.setText(android.text.TextUtils.join(", ", mFitnessLocation.getAddress()));
+        mAddressLabel.setOnClickListener(this);
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mWebsiteLabel) {
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mFitnessLocation.getWebsite()));
+            startActivity(webIntent);
+        }
+        if (v == mPhoneLabel) {
+            Intent phoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + mFitnessLocation.getPhone()));
+            startActivity(phoneIntent);
+        }
+        if (v == mAddressLabel) {
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + mFitnessLocation.getLatitude() + "," + mFitnessLocation.getLongitude() + "?q=(" + mFitnessLocation.getName() + ")"));
+            startActivity(mapIntent);
+        }
     }
 }
 
